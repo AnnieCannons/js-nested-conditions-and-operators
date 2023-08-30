@@ -50,7 +50,9 @@ if (savings > 500) {
 /************************ Exercise 3 *************************/
 
 // Create a variable called time and set it equal to the time that the user answers when you ask "What time is it?"
-let time = prompt('what time is it ?')
+
+// let time = prompt('what time is it ?')
+
 // Create an if statement so that if the time is less than 10, the user will be greeted with a "Good Morning!" NOTE: You can use the 24 hours time method, also known as military time.
 if (time < 10){
   alert('Good Morning !')}
@@ -99,8 +101,8 @@ let isCustomer2Eligible = isEligibleForSpecialDiscount(isNewUser2, isFirstPurcha
 
 /************************ Exercise 5 *************************/
 
-// let age2 = prompt("How old are you?");
-// let language = prompt("What is your favorite coding language?");
+let age2 = prompt("How old are you?");
+let language = prompt("What is your favorite coding language?");
 
 // Uncomment the above code (and feel free to re-comment it again to avoid excessive prompts.)
 
