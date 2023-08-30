@@ -33,7 +33,9 @@ if (savings > 500) {
 
 
 // Based on the above code, what will be the value of itemToBuy after the code is run? Write your guess below. How will you check your answer to be sure it is correct?
-
+// I think item to buy will be dinner.
+//  i would run code in consol log directly or by 
+// console.log(itemToBuy)
 
 
 
