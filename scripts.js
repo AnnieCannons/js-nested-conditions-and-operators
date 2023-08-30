@@ -52,7 +52,7 @@ if (savings > 500) {
 // Create a variable called time and set it equal to the time that the user answers when you ask "What time is it?"
 let time = prompt('what time is it ?')
 // Create an if statement so that if the time is less than 10, the user will be greeted with a "Good Morning!" NOTE: You can use the 24 hours time method, also known as military time.
-if (Number(time) < 10){
+if (time < 10){
   alert('Good Morning !')}
 
 // If the time is less than 17 (5:00pm in 12-hour time), the user should be greeted by a "Good Afternoon!".
@@ -88,13 +88,14 @@ let isFirstPurchase1 = true;
 let isCustomer1Eligible = isEligibleForSpecialDiscount(isNewUser1, isFirstPurchase1);
 
 // Write down your idea for the value of isCustomer1Eligible below, then log it to the console to check.
+// I think customer 1 will be eligible, because they are a new user and this is there first purchase
 
 let isNewUser2 = false;
 let isFirstPurchase2 = true;
 let isCustomer2Eligible = isEligibleForSpecialDiscount(isNewUser2, isFirstPurchase2);
 
 // Write down your idea for the value of isCustomer2Eligible below, then log it to the console to check.
-
+// I think customer 2 will not be eligible , because they are not a new user even tho this will be there first purchase 
 
 /************************ Exercise 5 *************************/
 
