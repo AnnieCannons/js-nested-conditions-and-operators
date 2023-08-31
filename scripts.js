@@ -13,6 +13,32 @@
 
 // Since this is a function that returns a value, you can save what calling it evaluates to in a variable and log that to the console.
 
+function largestNumber (num1, num2, num3) {
+  if (num1 >= num2 && num1 >= num3) {
+  return num1}
+else if (num2 >= num1 && num2 >= num3){
+    return num2;
+  } else {return num3};
+}
+
+let result = largestNumber(3, 6, 8);
+console.log(result);
+
+result = largestNumber(5, 4, 10);
+console.log(result);
+
+result = largestNumber(2, 7, 6);
+console.log(result);
+
+result = largestNumber(200, 300, 150);
+console.log(result);
+
+result = largestNumber(12, 11, 1);
+console.log(result);
+
+result = largestNumber(130, -8, 18);
+console.log(result);
+
 
 
 
@@ -33,6 +59,10 @@ if (savings > 500) {
 
 
 // Based on the above code, what will be the value of itemToBuy after the code is run? Write your guess below. How will you check your answer to be sure it is correct?
+
+// Dinner
+
+console.log(itemToBuy);
 
 
 
@@ -57,6 +87,14 @@ if (savings > 500) {
 
 
 
+//let time = prompt("What time is it?")
+
+//if (Number(time) < 10) { 
+  //console.log("Good Morning!");}
+ // else if (Number(time) < 17)
+ // {console.log("Good Afternoon!");}
+
+ // else {console.log("Good evening!")};
 
 
 
@@ -79,7 +117,12 @@ let isNewUser1 = true;
 let isFirstPurchase1 = true;
 let isCustomer1Eligible = isEligibleForSpecialDiscount(isNewUser1, isFirstPurchase1);
 
+//true
+
+//console.log(isCustomer1Eligible);
+
 // Write down your idea for the value of isCustomer1Eligible below, then log it to the console to check.
+
 
 let isNewUser2 = false;
 let isFirstPurchase2 = true;
@@ -87,11 +130,24 @@ let isCustomer2Eligible = isEligibleForSpecialDiscount(isNewUser2, isFirstPurcha
 
 // Write down your idea for the value of isCustomer2Eligible below, then log it to the console to check.
 
+//false
+
+console.log(isCustomer2Eligible);
+
 
 /************************ Exercise 5 *************************/
 
-// let age2 = prompt("How old are you?");
-// let language = prompt("What is your favorite coding language?");
+//let age2 = prompt("How old are you?");
+//let language = prompt("What is your favorite coding language?");
+let returnMessage = "Welcome, Coder"
+
+
+function welcomeMessage(age2, language) {
+  if ((age2 >= 18) && (language === "JavaScript")) {
+  console.log(returnMessage); }}
+
+//welcomeMessage(age2, language);
+
 
 // Uncomment the above code (and feel free to re-comment it again to avoid excessive prompts.)
 
@@ -104,9 +160,9 @@ let isCustomer2Eligible = isEligibleForSpecialDiscount(isNewUser2, isFirstPurcha
 
 /************************ Exercise 6 *************************/
 
-// let favDanceMove = prompt("What is your favorite dance move?");
-// let userAge = prompt("How old are you?");
-// let color = prompt("What is your favorite color?");
+let favDanceMove = prompt("What is your favorite dance move?");
+let userAge = prompt("How old are you?");
+let color = prompt("What is your favorite color?");
 
 // Uncomment the above code (and feel free to re-comment it again to avoid excessive prompts.)
 
@@ -117,6 +173,17 @@ let isCustomer2Eligible = isEligibleForSpecialDiscount(isNewUser2, isFirstPurcha
 // Test it by inputting all 3 answers so the conditions are true, and then with only 1 or 2 true.
 
 // Feel free to comment out the code once you solve the problem, so that you don't have too many prompts interfering with your flow!
+
+function userAccess (favDanceMove, userAge, color) {
+  if ((favDanceMove === "The Robot") && (userAge < 45) && (color === "blue")) {
+  console.log("Welcome!");} 
+else {console.log("Access Denied!")}
+
+};
+
+userAccess(favDanceMove, userAge, color);
+
+
 
 
 
