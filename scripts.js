@@ -54,18 +54,19 @@ if (savings > 500) {
 // let time = prompt('what time is it ?')
 
 // Create an if statement so that if the time is less than 10, the user will be greeted with a "Good Morning!" NOTE: You can use the 24 hours time method, also known as military time.
-if (time < 10){
-  alert('Good Morning !')}
+// if (time < 10){
+  // alert('Good Morning !')}
 
 // If the time is less than 17 (5:00pm in 12-hour time), the user should be greeted by a "Good Afternoon!".
-else if  (time < 17){
-  alert('Good Afternoon!')
-}
+// else if  (time < 17){
+  // alert('Good Afternoon!')
+// }
 // If the answer is anything else, the user should be greeted by a "Good Evening!".
 
-else {
-  alert('Good Evening!')
-}
+// else {
+  // alert('Good Evening!')
+// 
+// }
 
 
 
@@ -101,13 +102,19 @@ let isCustomer2Eligible = isEligibleForSpecialDiscount(isNewUser2, isFirstPurcha
 
 /************************ Exercise 5 *************************/
 
-let age2 = prompt("How old are you?");
-let language = prompt("What is your favorite coding language?");
-
+// let age2 = prompt("How old are you?");
+// let language = prompt("What is your favorite coding language?");
+// let message = "Welcome Coder !!"
 // Uncomment the above code (and feel free to re-comment it again to avoid excessive prompts.)
 
 // Create a conditional statement that checks if a user's age is greater than 18 and if their language is 'JavaScript'. If both are true, log a message to the console that says, "Welcome Coder!"
 
+// function welcomeMessage(age2, language){
+  // if ((age2 >= 18) &&(language ==="javaScript")){
+    // console.log(message)
+  // }
+// }
+// welcomeMessage(age2,language)
 // Note that this variable is called `age2`, and don't check the previous `age` variable! (A production-level application would use scope to make sure we don't have to do that!)
 
 
@@ -115,9 +122,9 @@ let language = prompt("What is your favorite coding language?");
 
 /************************ Exercise 6 *************************/
 
-// let favDanceMove = prompt("What is your favorite dance move?");
-// let userAge = prompt("How old are you?");
-// let color = prompt("What is your favorite color?");
+let favDanceMove = prompt("What is your favorite dance move?");
+let userAge = prompt("How old are you?");
+let color = prompt("What is your favorite color?");
 
 // Uncomment the above code (and feel free to re-comment it again to avoid excessive prompts.)
 
@@ -130,7 +137,12 @@ let language = prompt("What is your favorite coding language?");
 // Feel free to comment out the code once you solve the problem, so that you don't have too many prompts interfering with your flow!
 
 
-
+function userAccess ( favDanceMove, userAge,color){
+  if((favDanceMove === "the robot")&& (userAge <45)&&(color === "blue")){
+    console.log ("welcome !")
+    else { console.log("access Denied")}
+  }
+}
 
 
 
