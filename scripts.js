@@ -14,8 +14,17 @@
 // Since this is a function that returns a value, you can save what calling it evaluates to in a variable and log that to the console.
 
 
+function returnLargest(list) {
+  let order = list.sort();
+  let largest = order.at(-1);
+  return largest
+}
 
+let list = [-130, -8, 18];
 
+let answer = returnLargest(list);
+
+console.log(answer);
 
 /************************** Exercise 2 ***********************/
 
@@ -34,8 +43,9 @@ if (savings > 500) {
 
 // Based on the above code, what will be the value of itemToBuy after the code is run? Write your guess below. How will you check your answer to be sure it is correct?
 
+// Dinner! 
 
-
+//console.log(itemToBuy);
 
 
 
@@ -56,12 +66,26 @@ if (savings > 500) {
 // If the answer is anything else, the user should be greeted by a "Good Evening!".
 
 
+//let timeStr = prompt('What time is it? \n(example: 4:15 pm or 9:32 am)');
 
+const convertTime = timeStr => {
+  const [time, modifier] = timeStr.split(' ');
+  let [hours, minutes] = time.split(':');
+  if (hours === '12') {
+    hours = '00';
+  }
+  if (modifier === 'pm') {
+    hours = parseInt(hours, 10) + 12;
+  }
+  let timeEnd = `${hours}`;
+  if (timeEnd < 10) {
+    return alert('Good Morning!')
+  }
+  else if (timeEnd < 17) { return alert('Good Afternoon!') }
+  else { return alert('Good Evening!') }
+}
 
-
-
-
-
+//convertTime(timeStr);
 
 /************************ Exercise 4 *************************/
 
@@ -81,19 +105,35 @@ let isCustomer1Eligible = isEligibleForSpecialDiscount(isNewUser1, isFirstPurcha
 
 // Write down your idea for the value of isCustomer1Eligible below, then log it to the console to check.
 
+// returns true
+
 let isNewUser2 = false;
 let isFirstPurchase2 = true;
 let isCustomer2Eligible = isEligibleForSpecialDiscount(isNewUser2, isFirstPurchase2);
 
 // Write down your idea for the value of isCustomer2Eligible below, then log it to the console to check.
 
+// returns false 
+
+console.log(isCustomer1Eligible);
+console.log(isCustomer2Eligible);
+
 
 /************************ Exercise 5 *************************/
 
-// let age2 = prompt("How old are you?");
-// let language = prompt("What is your favorite coding language?");
+//let age2 = prompt("How old are you?");
+//let language = prompt("What is your favorite coding language?");
 
 // Uncomment the above code (and feel free to re-comment it again to avoid excessive prompts.)
+function welcomeMessage(age2, language) {
+  if ((age2 > 18) && (language === 'JavaScript')) {
+    console.log('Welcome Coder!')
+  }
+  else {
+    console.log('error')
+  }
+}
+//welcomeMessage(age2, language)
 
 // Create a conditional statement that checks if a user's age is greater than 18 and if their language is 'JavaScript'. If both are true, log a message to the console that says, "Welcome Coder!"
 
@@ -104,14 +144,22 @@ let isCustomer2Eligible = isEligibleForSpecialDiscount(isNewUser2, isFirstPurcha
 
 /************************ Exercise 6 *************************/
 
-// let favDanceMove = prompt("What is your favorite dance move?");
-// let userAge = prompt("How old are you?");
-// let color = prompt("What is your favorite color?");
+//let favDanceMove = prompt("What is your favorite dance move?");
+//let userAge = prompt("How old are you?");
+//let color = prompt("What is your favorite color?");
+
 
 // Uncomment the above code (and feel free to re-comment it again to avoid excessive prompts.)
 
 // Create a conditional statement that checks if a user's age is less than 45 and their favorite dance move is The Robot and their favorite color is blue. DON'T FORGET that all three prompts will evaluate to strings, NOT numbers!
 
+function danceMessage(favDanceMove, userAge, color) {
+  if ((favDanceMove === 'The Robot') && (Number(userAge) < 45) && (color === 'blue')) {
+    return alert('Welcome!')
+  } else { return alert('Access Denied') }
+}
+
+//danceMessage(favDanceMove, userAge, color);
 // If all are true, log a message to the console that says, "Welcome!". If any of them are not true, log a message to the console that says 'Access Denied!'.
 
 // Test it by inputting all 3 answers so the conditions are true, and then with only 1 or 2 true.
@@ -173,11 +221,11 @@ function authenticateUser(username, password) {
 }
 
 
-  // Call the authenticateUser function. Pass in arguments that would return "User authenticated"
+// Call the authenticateUser function. Pass in arguments that would return "User authenticated"
 
 
 
-  // Call the authenticateUser function. Pass in arguments that would return "Invalid username or password."
+// Call the authenticateUser function. Pass in arguments that would return "Invalid username or password."
 
 
 
@@ -268,7 +316,7 @@ function authenticateUser(username, password) {
 
 // What will happen with an age of 20?
 
-  /************************ Exercise 12 *************************/
+/************************ Exercise 12 *************************/
 function calculateTotalPrice(quantity, unitPrice) {
   let subtotal = quantity * unitPrice;
   let total;
@@ -295,12 +343,12 @@ function calculateTotalPrice(quantity, unitPrice) {
 
   return total.toFixed(2);
 }
-  
-  // Call calculateTotalPrice so that no discount is applied. 
+
+// Call calculateTotalPrice so that no discount is applied. 
 
 
 
-  // Call calculateTotalPrice so that a 5% discount is applied.
+// Call calculateTotalPrice so that a 5% discount is applied.
 
 /************************ Exercise 13 *************************/
 
