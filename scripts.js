@@ -66,10 +66,10 @@ if (savings > 500) {
 // If the answer is anything else, the user should be greeted by a "Good Evening!".
 
 
-//let timeStr = prompt('What time is it? \n(example: 4:15 pm or 9:32 am)');
+let timeStr = prompt('What time is it? \n(example: 4:15 pm or 9:32 am)');
 
-const convertTime = timeStr => {
-  const [time, modifier] = timeStr.split(' ');
+let convertTime = timeStr => {
+  let [time, modifier] = timeStr.split(' ');
   let [hours, minutes] = time.split(':');
   if (hours === '12') {
     hours = '00';
@@ -85,7 +85,7 @@ const convertTime = timeStr => {
   else { return alert('Good Evening!') }
 }
 
-//convertTime(timeStr);
+convertTime(timeStr);
 
 /************************ Exercise 4 *************************/
 
