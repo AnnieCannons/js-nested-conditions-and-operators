@@ -1,7 +1,15 @@
 /************************** Exercise 1 ***********************/
 
 // Write a function that takes three numbers as arguments and returns the largest number among them. Do not use `Math.max`, though you're welcome to do so after you solve it using conditionals.
-
+function findLargestNumber(num1, num2, num3) {
+  if (num1 >= num2 && num1 >= num3) {
+    return num1;
+  } else if (num2 >= num1 && num2 >= num3) {
+    return num2;
+  } else {
+    return num3;
+  }
+}
 // Test it by calling the function with:
 
 // - 3, 6, 8
@@ -13,8 +21,19 @@
 
 // Since this is a function that returns a value, you can save what calling it evaluates to in a variable and log that to the console.
 
+const result1 = findLargestNumber(3, 6, 8);
+const result2 = findLargestNumber(5, 4, 10);
+const result3 = findLargestNumber(2, 7, 6);
+const result4 = findLargestNumber(200, 300, 150);
+const result5 = findLargestNumber(12, 11, 1);
+const result6 = findLargestNumber(130, -8, 18);
 
-
+console.log(result1); 
+console.log(result2); 
+console.log(result3); 
+console.log(result4); 
+console.log(result5); 
+console.log(result6); 
 
 
 /************************** Exercise 2 ***********************/
@@ -34,14 +53,9 @@ if (savings > 500) {
 
 // Based on the above code, what will be the value of itemToBuy after the code is run? Write your guess below. How will you check your answer to be sure it is correct?
 
+//Dinner
 
-
-
-
-
-
-
-
+console.log(itemToBuy);
 
 
 
@@ -55,11 +69,15 @@ if (savings > 500) {
 
 // If the answer is anything else, the user should be greeted by a "Good Evening!".
 
+// let time = prompt("What time is it (in 24-hour format)?");
 
-
-
-
-
+// if (time < 10) {
+//   console.log("Good Morning!");
+// } else if (time < 17) {
+//   console.log("Good Afternoon!");
+// } else {
+//   console.log("Good Evening!");
+// }
 
 
 
@@ -80,24 +98,35 @@ let isFirstPurchase1 = true;
 let isCustomer1Eligible = isEligibleForSpecialDiscount(isNewUser1, isFirstPurchase1);
 
 // Write down your idea for the value of isCustomer1Eligible below, then log it to the console to check.
+//true
+console.log(isCustomer1Eligible);
 
 let isNewUser2 = false;
 let isFirstPurchase2 = true;
 let isCustomer2Eligible = isEligibleForSpecialDiscount(isNewUser2, isFirstPurchase2);
 
 // Write down your idea for the value of isCustomer2Eligible below, then log it to the console to check.
-
+//false
+console.log(isCustomer2Eligible)
 
 /************************ Exercise 5 *************************/
 
 // let age2 = prompt("How old are you?");
 // let language = prompt("What is your favorite coding language?");
+// let returnMessage = 'Welcome, Coder!'
 
 // Uncomment the above code (and feel free to re-comment it again to avoid excessive prompts.)
 
 // Create a conditional statement that checks if a user's age is greater than 18 and if their language is 'JavaScript'. If both are true, log a message to the console that says, "Welcome Coder!"
 
 // Note that this variable is called `age2`, and don't check the previous `age` variable! (A production-level application would use scope to make sure we don't have to do that!)
+
+// if (parseInt(age2) > 18 && language === 'JavaScript') {
+//   console.log(returnMessage);
+// } else {
+//   console.log('You shall not pass!')
+// }
+
 
 
 
@@ -113,6 +142,11 @@ let isCustomer2Eligible = isEligibleForSpecialDiscount(isNewUser2, isFirstPurcha
 // Create a conditional statement that checks if a user's age is less than 45 and their favorite dance move is The Robot and their favorite color is blue. DON'T FORGET that all three prompts will evaluate to strings, NOT numbers!
 
 // If all are true, log a message to the console that says, "Welcome!". If any of them are not true, log a message to the console that says 'Access Denied!'.
+// if (userAge < "45" && favDanceMove === "The Robot" && color === "blue") {
+//   console.log("Welcome!");
+// } else {
+//   console.log("Access Denied!");
+// }
 
 // Test it by inputting all 3 answers so the conditions are true, and then with only 1 or 2 true.
 
