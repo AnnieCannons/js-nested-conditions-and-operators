@@ -69,20 +69,23 @@ if (savings > 500) {
 let timeStr = prompt('What time is it? \n(example: 4:15 pm or 9:32 am)');
 
 let convertTime = timeStr => {
-  let [time, modifier] = timeStr.split(' ');
-  let [hours, minutes] = time.split(':');
+  let [time, modifier] = timeStr.split(' ');  //splits the am or pm into a separate string 
+  let [hours, minutes] = time.split(':'); // splits the numbers before and after the : into a new array
   if (hours === '12') {
     hours = '00';
   }
   if (modifier === 'pm') {
     hours = parseInt(hours, 10) + 12;
   }
-  let timeEnd = `${hours}`;
+  let timeEnd = hours;  // declaring timeEnd as a variable with the value of 'hours' variable 
   if (timeEnd < 10) {
     return alert('Good Morning!')
   }
-  else if (timeEnd < 17) { return alert('Good Afternoon!') }
-  else { return alert('Good Evening!') }
+  else if (timeEnd < 17) { 
+    return alert('Good Afternoon!') }
+
+  else { 
+    return alert('Good Evening!') }
 }
 
 convertTime(timeStr);
@@ -155,8 +158,8 @@ function welcomeMessage(age2, language) {
 
 function danceMessage(favDanceMove, userAge, color) {
   if ((favDanceMove === 'The Robot') && (Number(userAge) < 45) && (color === 'blue')) {
-    return alert('Welcome!')
-  } else { return alert('Access Denied') }
+    alert('Welcome!')
+  } else { alert('Access Denied') }
 }
 
 //danceMessage(favDanceMove, userAge, color);
