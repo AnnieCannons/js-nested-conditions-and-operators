@@ -1,0 +1,10 @@
+Exercise 1 - Great job!
+
+Exercise 2 - Your code looks good, but can you refactor to use conditional statements?
+
+Exercise 3 - Can you explain lines 72, 73, and 80 in your code?
+
+Exercise 4 and 5 look great!
+
+Exercise 6 - In most cases, you wouldn't want to return an alert. A return statement returns a value from a function that can be stored by a variable and used in another part of the program. An alert is a statement that can be used to notify the user of something, and can be treated as its own JS statement. 
+
