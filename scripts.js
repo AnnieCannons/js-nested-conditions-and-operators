@@ -2,18 +2,33 @@
 
 // Write a function that takes three numbers as arguments and returns the largest number among them. Do not use `Math.max`, though you're welcome to do so after you solve it using conditionals.
 
+function findLargestNumber(a,b,c){
+  let largest =a;
+  if(b >largest){
+    largest = b;
+  }
+  if(c >largest){
+    largest = c;
+  }
+  return largest
+}
+
 // Test it by calling the function with:
 
-// - 3, 6, 8
-// - 5, 4, 10
-// - 2, 7, 6
-// - 200, 300, 150
-// - 12, 11, 1
-// - 130, -8, 18
+let test1 = findLargestNumber(3, 6, 8);
+let test2 = findLargestNumber(5, 4, 10);
+let test3 = findLargestNumber(2, 7, 6);
+let test4 = findLargestNumber(200, 300, 150);
+let test5 = findLargestNumber(12, 11, 1);
+let test6 = findLargestNumber(130, -8, 18);
 
 // Since this is a function that returns a value, you can save what calling it evaluates to in a variable and log that to the console.
-
-
+console.log(test1)
+console.log(test2)
+console.log(test3)
+console.log(test4)
+console.log(test5)
+console.log(test6)
 
 
 
@@ -33,7 +48,9 @@ if (savings > 500) {
 
 
 // Based on the above code, what will be the value of itemToBuy after the code is run? Write your guess below. How will you check your answer to be sure it is correct?
-
+// I think item to buy will be dinner.
+//  i would run code in consol log directly or by 
+// console.log(itemToBuy)
 
 
 
@@ -49,13 +66,22 @@ if (savings > 500) {
 
 // Create a variable called time and set it equal to the time that the user answers when you ask "What time is it?"
 
+// let time = prompt('what time is it ?')
+
 // Create an if statement so that if the time is less than 10, the user will be greeted with a "Good Morning!" NOTE: You can use the 24 hours time method, also known as military time.
+// if (time < 10){
+  // alert('Good Morning !')}
 
 // If the time is less than 17 (5:00pm in 12-hour time), the user should be greeted by a "Good Afternoon!".
-
+// else if  (time < 17){
+  // alert('Good Afternoon!')
+// }
 // If the answer is anything else, the user should be greeted by a "Good Evening!".
 
-
+// else {
+  // alert('Good Evening!')
+// 
+// }
 
 
 
@@ -80,23 +106,30 @@ let isFirstPurchase1 = true;
 let isCustomer1Eligible = isEligibleForSpecialDiscount(isNewUser1, isFirstPurchase1);
 
 // Write down your idea for the value of isCustomer1Eligible below, then log it to the console to check.
+// I think customer 1 will be eligible, because they are a new user and this is there first purchase
 
 let isNewUser2 = false;
 let isFirstPurchase2 = true;
 let isCustomer2Eligible = isEligibleForSpecialDiscount(isNewUser2, isFirstPurchase2);
 
 // Write down your idea for the value of isCustomer2Eligible below, then log it to the console to check.
-
+// I think customer 2 will not be eligible , because they are not a new user even tho this will be there first purchase 
 
 /************************ Exercise 5 *************************/
 
-// let age2 = prompt("How old are you?");
-// let language = prompt("What is your favorite coding language?");
-
+let age2 = prompt("How old are you?");
+let language = prompt("What is your favorite coding language?");
+let message = "Welcome Coder !!"
 // Uncomment the above code (and feel free to re-comment it again to avoid excessive prompts.)
 
 // Create a conditional statement that checks if a user's age is greater than 18 and if their language is 'JavaScript'. If both are true, log a message to the console that says, "Welcome Coder!"
 
+function welcomeMessage(age2, language){
+  if ((age2 >= 18) &&(language ==="javaScript")){
+    console.log(message)
+  }
+}
+welcomeMessage(age2,language)
 // Note that this variable is called `age2`, and don't check the previous `age` variable! (A production-level application would use scope to make sure we don't have to do that!)
 
 
@@ -104,9 +137,9 @@ let isCustomer2Eligible = isEligibleForSpecialDiscount(isNewUser2, isFirstPurcha
 
 /************************ Exercise 6 *************************/
 
-// let favDanceMove = prompt("What is your favorite dance move?");
-// let userAge = prompt("How old are you?");
-// let color = prompt("What is your favorite color?");
+let favDanceMove = prompt("What is your favorite dance move?");
+let userAge = prompt("How old are you?");
+let color = prompt("What is your favorite color?");
 
 // Uncomment the above code (and feel free to re-comment it again to avoid excessive prompts.)
 
@@ -119,6 +152,11 @@ let isCustomer2Eligible = isEligibleForSpecialDiscount(isNewUser2, isFirstPurcha
 // Feel free to comment out the code once you solve the problem, so that you don't have too many prompts interfering with your flow!
 
 
+function userAccess ( favDanceMove, userAge,color){
+  if((favDanceMove === "the robot")&& (userAge <45)&&(color === "blue")){
+    console.log ("welcome !")
+  }else { console.log("access Denied")}
+  }
 
 
 
