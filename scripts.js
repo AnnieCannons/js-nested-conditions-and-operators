@@ -2,18 +2,33 @@
 
 // Write a function that takes three numbers as arguments and returns the largest number among them. Do not use `Math.max`, though you're welcome to do so after you solve it using conditionals.
 
+function findLargestNumber(a,b,c){
+  let largest =a;
+  if(b >largest){
+    largest = b;
+  }
+  if(c >largest){
+    largest = c;
+  }
+  return largest
+}
+
 // Test it by calling the function with:
 
-// - 3, 6, 8
-// - 5, 4, 10
-// - 2, 7, 6
-// - 200, 300, 150
-// - 12, 11, 1
-// - 130, -8, 18
+let test1 = findLargestNumber(3, 6, 8);
+let test2 = findLargestNumber(5, 4, 10);
+let test3 = findLargestNumber(2, 7, 6);
+let test4 = findLargestNumber(200, 300, 150);
+let test5 = findLargestNumber(12, 11, 1);
+let test6 = findLargestNumber(130, -8, 18);
 
 // Since this is a function that returns a value, you can save what calling it evaluates to in a variable and log that to the console.
-
-
+console.log(test1)
+console.log(test2)
+console.log(test3)
+console.log(test4)
+console.log(test5)
+console.log(test6)
 
 
 
@@ -102,19 +117,19 @@ let isCustomer2Eligible = isEligibleForSpecialDiscount(isNewUser2, isFirstPurcha
 
 /************************ Exercise 5 *************************/
 
-// let age2 = prompt("How old are you?");
-// let language = prompt("What is your favorite coding language?");
-// let message = "Welcome Coder !!"
+let age2 = prompt("How old are you?");
+let language = prompt("What is your favorite coding language?");
+let message = "Welcome Coder !!"
 // Uncomment the above code (and feel free to re-comment it again to avoid excessive prompts.)
 
 // Create a conditional statement that checks if a user's age is greater than 18 and if their language is 'JavaScript'. If both are true, log a message to the console that says, "Welcome Coder!"
 
-// function welcomeMessage(age2, language){
-  // if ((age2 >= 18) &&(language ==="javaScript")){
-    // console.log(message)
-  // }
-// }
-// welcomeMessage(age2,language)
+function welcomeMessage(age2, language){
+  if ((age2 >= 18) &&(language ==="javaScript")){
+    console.log(message)
+  }
+}
+welcomeMessage(age2,language)
 // Note that this variable is called `age2`, and don't check the previous `age` variable! (A production-level application would use scope to make sure we don't have to do that!)
 
 
@@ -140,9 +155,9 @@ let color = prompt("What is your favorite color?");
 function userAccess ( favDanceMove, userAge,color){
   if((favDanceMove === "the robot")&& (userAge <45)&&(color === "blue")){
     console.log ("welcome !")
-    else { console.log("access Denied")}
+  }else { console.log("access Denied")}
   }
-}
+
 
 
 
